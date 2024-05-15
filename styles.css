@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans Unicode';
+    overflow-x: hidden;
+    background: -webkit-linear-gradient(90deg, #283938, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg, #283938, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.flex-container {
+    margin-top: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    border-bottom: 0.2px solid white;
+
+
+}
+
+.flex-container img {
+    width: 100px;
+    height: 100px;
+}
+
+.flex-container a {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+    border: 0.5px inset #716a6a;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.flex-container a:hover {
+    cursor: pointer;
+}
+
+.txt-presentacion {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.video-presentacion video {
+    height: 800px;
+    margin-bottom: 50px;
+
+}
+
+.video-presentacion {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-personajes {
+
+    color: #e4dcdc;
+    text-align: center;
+    margin: 10px 10px;
+    margin-bottom: 30px;
+    border: 2px solid silver;
+
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 380px;
+    height: 750px;
+}
+
+#prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}
+
+.carousel img {
+    display: none;
+}
+
+.container {
+    position: relative;
+}
+
+.imageToShow {
+    max-width: 100%;
+}
+
+#hideButton {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+.descripcion-personajes {
+    display: flex;
+    align-items: center;
+    color: #e4dcdc;
+    text-align: center;
+    margin: 10px 10px;
+}
