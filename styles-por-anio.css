@@ -1,0 +1,24 @@
+.anio-1997 {
+    margin: 20px 20px;
+    text-align: center;
+    color: white;
+}
+
+.games {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    border: 8px solid #b0acac;
+    border-radius: 10px;
+    height: 300px;
+    width: 20%;
+}
+
+.card img{
+    background-size: cover;
+    height: 285px;
+    width: 100%;
+}

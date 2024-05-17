@@ -1,27 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    const images = document.querySelectorAll('.carousel img');
+    const items = document.querySelectorAll('.carousel-item');
     let counter = 0;
 
-    images[counter].style.display = 'block'; // Mostrar la primera imagen por defecto
+    items[counter].classList.add('active'); // Mostrar el primer elemento por defecto
 
     nextBtn.addEventListener('click', () => {
-        images[counter].style.display = 'none';
-        counter++;
-        if (counter >= images.length) {
-            counter = 0;
-        }
-        images[counter].style.display = 'block';
+        items[counter].classList.remove('active');
+        counter = (counter + 1) % items.length; // Ciclar hacia adelante
+        items[counter].classList.add('active');
     });
 
     prevBtn.addEventListener('click', () => {
-        images[counter].style.display = 'none';
-        counter--;
-        if (counter < 0) {
-            counter = images.length - 1;
-        }
-        images[counter].style.display = 'block';
+        items[counter].classList.remove('active');
+        counter = (counter - 1 + items.length) % items.length; // Ciclar hacia atrás
+        items[counter].classList.add('active');
     });
 });
 
