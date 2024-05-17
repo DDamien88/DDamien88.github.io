@@ -5,8 +5,10 @@
 }
 
 .games {
+    margin: 20px 20px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -14,11 +16,18 @@
     border: 8px solid #b0acac;
     border-radius: 10px;
     height: 300px;
-    width: 20%;
+    width: 60%;
 }
 
 .card img{
     background-size: cover;
     height: 285px;
     width: 100%;
+}
+
+.parrafo-card p{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
 }
