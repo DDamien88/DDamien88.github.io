@@ -13,19 +13,23 @@
 }
 
 .card {
-    border: 8px solid #b0acac;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+.card img {
+    border: 5px solid #989292;
     border-radius: 10px;
-    height: 300px;
-    width: 60%;
-}
-
-.card img{
     background-size: cover;
-    height: 285px;
-    width: 100%;
+    transition: all 1.3s;
 }
 
-.parrafo-card p{
+.card img:hover {
+    cursor:col-resize;
+    transform: scale(1.4);
+}
+
+.parrafo-card p {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     color: #fff;

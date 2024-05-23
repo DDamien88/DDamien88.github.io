@@ -2,20 +2,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const items = document.querySelectorAll('.carousel-item');
-    let counter = 0;
+    let count = 0;
 
-    items[counter].classList.add('active'); // Mostrar el primer elemento por defecto
+    items[count].classList.add('active'); // Mostrar el primer elemento por defecto
 
     nextBtn.addEventListener('click', () => {
-        items[counter].classList.remove('active');
-        counter = (counter + 1) % items.length; // Ciclar hacia adelante
-        items[counter].classList.add('active');
+        items[count].classList.remove('active');
+        count = (count + 1) % items.length; // Ciclar hacia adelante
+        items[count].classList.add('active');
     });
 
     prevBtn.addEventListener('click', () => {
-        items[counter].classList.remove('active');
-        counter = (counter - 1 + items.length) % items.length; // Ciclar hacia atrás
-        items[counter].classList.add('active');
+        items[count].classList.remove('active');
+        count = (count - 1 + items.length) % items.length; // Ciclar hacia atrás
+        items[count].classList.add('active');
     });
 });
 
@@ -33,6 +33,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const hideButton = document.getElementById('hideButton');
 hideButton.addEventListener('click', limpiar);*/
-
-
-
