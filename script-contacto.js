@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function validar() {
         ltaErrores.innerHTML = "";
-        ltaMensajes.innerHTML = "";
+        //ltaMensajes.innerHTML = "";
 
         txtNombre.classList.remove("error");
         apelli.classList.remove("error");
@@ -71,10 +71,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    // Asegúrate de que el formulario llame a la función validar en el evento onsubmit
     document.getElementById('formulario').onsubmit = validar;
 
-    // Prevenir la entrada de números en los campos de texto
     function evitarNumeros(event) {
         if (/\d/.test(event.key)) {
             event.preventDefault();
