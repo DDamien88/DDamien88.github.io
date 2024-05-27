@@ -24,22 +24,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         // Validación de nombre
         if (nbre.length === 0) {
-            errores.push("Falta el nombre + ");
+            errores.push("Falta el nombre");
             txtNombre.classList.add("error");
         } else if (nbre.length > 9) {
-            errores.push(" Nombre muy largo (máximo 9 caracteres) + ");
+            errores.push(" Nombre muy largo (máximo 9 caracteres)");
             txtNombre.classList.add("error");
         }
 
         // Validación de apellido
         if (apelliVal.length < 3) {
-            errores.push(" Apellido muy corto (mínimo 3 caracteres) + ");
+            errores.push("Apellido muy corto (mínimo 3 caracteres)");
             apelli.classList.add("error");
         }
 
         // Validación de email
         if (emailVal.length === 0) {
-            errores.push(" Falta el email + ");
+            errores.push("Falta el email");
             email.classList.add("error");
         } else if (!regex_mail.test(emailVal)) {
             errores.push("Email inválido");
@@ -57,13 +57,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
             let li = document.createElement("li");
             li.innerHTML = err;
             ltaErrores.appendChild(li);
+            ltaErrores.appendChild(document.createElement("br"));
         }
 
         if (errores.length == 0) {
             let li = document.createElement("li");
             li.innerHTML = `Formulario enviado correctamente`;
             ltaMensajes.appendChild(li);
-            //ltaErrores.appendChild(document.createElement("br"));
             document.forms[0].reset();
             return false; // return true para enviar el formulario
         } else {
